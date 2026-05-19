@@ -1,65 +1,79 @@
 # Childcare Data Insights Project
 
-## Project Overview
-This project analyzes national childcare pricing data to better understand affordability, regional cost differences, and the relationship between childcare expenses and household income across the United States.
+## Overview
+This project analyzes national childcare pricing data in the United States to understand affordability trends, regional differences, and the relationship between childcare costs and household income.
 
-The analysis explores trends in:
+The analysis focuses on:
 - Infant, toddler, and preschool childcare costs
-- Childcare affordability as a percentage of household income
-- Female labor force participation
-- Geographic differences across counties and states
-- National childcare cost growth over time
+- Cost burden as a percentage of household income
+- Geographic differences across states and counties
+- Time-based trends in childcare affordability
+- Relationship between childcare costs and socioeconomic indicators
 
 ---
 
-## Tools & Technologies
+## Important Note About the Dataset
+The original dataset used in this project (`nationaldatabaseofchildcareprices.xlsx`) is large and stored locally during development. Due to file size limitations, it is not included in this GitHub repository.
+
+Instead, a cleaned and processed dataset is provided:
+
+- `childcare_cleaned_long.csv`
+
+This file contains transformed and analysis-ready data used for visualization and modeling.
+
+---
+
+## Tools Used
 - Python
 - Pandas
 - NumPy
-- Seaborn
 - Matplotlib
+- Seaborn
 - Jupyter Notebook
 
 ---
 
-## Dataset
-National Database of Childcare Prices dataset.
+## How to Run This Project
+
+### Option 1 (Recommended)
+Run the notebook locally with the original dataset:
+
+1. Place `nationaldatabaseofchildcareprices.xlsx` in the same folder as the notebook
+2. Run all cells in order
+
+### Option 2 (GitHub Version)
+Use the provided cleaned dataset:
+
+```python
+df = pd.read_csv('childcare_cleaned_long.csv')
+```
+
+Note: Some original transformations and visualizations may differ when using the cleaned dataset.
 
 ---
 
-## Key Analysis Performed
+## Key Analyses
 - Data cleaning and preprocessing
-- Missing value handling
-- Affordability metric calculations
-- Correlation analysis
-- Trend analysis over time
-- Data visualization and exploratory analysis
+- Affordability calculations (cost as % of income)
+- Correlation analysis between childcare costs and household income
+- Geographic comparison across states and counties
+- Time series trends in childcare costs
+- Visualization of affordability thresholds
 
 ---
 
 ## Key Insights
-- Childcare costs vary significantly across states and counties.
-- Infant care places the largest financial burden on households.
-- In many regions, childcare costs exceed affordability thresholds.
-- Childcare costs have increased faster than household income growth in several areas.
+- Infant care represents the highest financial burden for families
+- Childcare costs vary significantly by state and county
+- In many regions, childcare consumes a large portion of household income
+- Cost growth has increased faster than income in several areas
+- Regional disparities highlight economic inequality in childcare access
 
 ---
 
-## Visualizations Included
-- Bar charts
-- Heatmaps
-- Histograms
-- Trend lines
-- Scatter plots
-- State-level comparisons
-
----
-
-## Files Included
-- `childcare_data_insights.ipynb` — Full analysis notebook
-- `nationaldatabaseofchildcareprices.xlsx` — Raw dataset
-- `childcare_cleaned_full.csv` — Cleaned dataset
-- `childcare_cleaned_long.csv` — Reshaped dataset for BI tools
+## Files in This Repository
+- `childcare_data_insights.ipynb` → Full analysis notebook
+- `childcare_cleaned_long.csv` → Cleaned dataset for analysis
 
 ---
 
